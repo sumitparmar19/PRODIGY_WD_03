@@ -1,0 +1,119 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+#game-title {
+    font-size: 40px;
+    color: black;
+    text-shadow: 0 0 8px yellow;
+}
+
+#current-turn {
+    font-size: 25px;
+    color: black;
+    text-shadow: 0 0 10px yellow;
+    margin-top: 20px; /* Ensure it's below the game board */
+}
+
+.default { background-image: url('theme/df.png'); }
+.holiday { background-image: url('theme/holiday-theme.png'); }
+.seasons { background-image: url('theme/snow .png'); }
+.popCulture { background-image: url('theme/hp.png'); }
+
+#container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%; /* Adjust based on your layout preference */
+}
+
+#player-setup {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    align-items: flex-start;
+}
+
+#game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.box:hover {
+    transform: translateZ(20px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* Assign LED-like glowing effects */
+.box:nth-child(1) { box-shadow: 0 0 8px red; }
+.box:nth-child(2) { box-shadow: 0 0 8px yellow; }
+.box:nth-child(3) { box-shadow: 0 0 8px green; }
+.box:nth-child(4) { box-shadow: 0 0 8px purple; }
+.box:nth-child(5) { box-shadow: 0 0 8px pink; }
+.box:nth-child(6) { box-shadow: 0 0 8px brown; }
+.box:nth-child(7) { box-shadow: 0 0 8px gold; }
+.box:nth-child(8) { box-shadow: 0 0 8px silver; }
+.box:nth-child(9) { box-shadow: 0 0 8px orange; }
+
+#controls-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button, select {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#endMessage {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}

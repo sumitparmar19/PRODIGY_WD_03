@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Tic Tac Toe</title>
+</head>
+<body class="default">
+    <h5 id="game-title">Tic Tac Toe</h5>
+    <div id="container">
+        <div id="player-setup">
+            <input type="text" id="player1Name" placeholder="Player 1 Name" /><br><br>
+            <input type="text" id="player2Name" placeholder="Player 2 Name" /><br><br>
+            <button id="setNamesButton">Set Names</button>
+        </div>
+        <div id="game-area">
+            <div id="board-container">
+                <div class="box" data-index="0"></div>
+                <div class="box" data-index="1"></div>
+                <div class="box" data-index="2"></div>
+                <div class="box" data-index="3"></div>
+                <div class="box" data-index="4"></div>
+                <div class="box" data-index="5"></div>
+                <div class="box" data-index="6"></div>
+                <div class="box" data-index="7"></div>
+                <div class="box" data-index="8"></div>
+            </div>
+            <div id="current-turn">Turn: </div>
+        </div>
+        <div id="controls-container">
+            <button id="restartButton">Restart Game</button>
+            <select id="themeSelector">
+                <option value="default">Default</option>
+                <option value="holiday">Holiday</option>
+                <option value="seasons">Seasons</option>
+                <option value="popCulture">Pop Culture</option>
+            </select>
+        </div>
+      
+        <div id="endMessage"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
